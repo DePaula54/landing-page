@@ -324,31 +324,45 @@
 
   /* ── FEATURES STRIP ── */
   .features {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 6px;
+    display: flex;
+    flex-direction: row;
     margin: 20px 0;
     animation: fadeUp 0.6s 0.4s ease both;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
   }
 
   .feat {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 14px 8px;
+    flex: 1 1 0;
+    width: 0;
+    padding: 16px 4px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    border-right: 1px solid var(--border);
+    box-sizing: border-box;
   }
-
-  .feat-icon { font-size: 22px; margin-bottom: 6px; }
+  .feat:last-child { border-right: none; }
 
   .feat-label {
     font-family: 'Oswald', sans-serif;
-    font-size: 11px;
-    font-weight: 600;
+    font-size: 10px;
+    font-weight: 700;
     letter-spacing: 0.5px;
     line-height: 1.3;
     text-transform: uppercase;
     color: var(--text);
+  }
+
+  .feat-desc {
+    font-size: 9.5px;
+    color: var(--muted);
+    line-height: 1.4;
+    text-align: center;
   }
 
   /* ── TRAINER SECTION ── */
@@ -594,23 +608,8 @@
   </div>
 
   <!-- FEATURES STRIP -->
-  <div class="features">
-    <div class="feat">
-      <div class="feat-icon">🥊</div>
-      <div class="feat-label">Treinos<br>Eficientes</div>
-    </div>
-    <div class="feat">
-      <div class="feat-icon">🥋</div>
-      <div class="feat-label">Aulas<br>de Luta</div>
-    </div>
-    <div class="feat">
-      <div class="feat-icon">🥗</div>
-      <div class="feat-label">Nutrição<br>Personalizada</div>
-    </div>
-    <div class="feat">
-      <div class="feat-icon">🏆</div>
-      <div class="feat-label">Resultados<br>de Verdade</div>
-    </div>
+  <div style="margin: 20px 0; animation: fadeUp 0.6s 0.4s ease both;">
+    <img src="features.jpg" alt="Treinos Eficientes | Aulas de Luta | Nutrição Personalizada | Resultados de Verdade" style="width:100%; border-radius:14px; display:block;">
   </div>
 
   <!-- TRAINER -->
